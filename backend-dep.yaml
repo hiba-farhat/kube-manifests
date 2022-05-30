@@ -24,7 +24,7 @@ spec:
           value: jdbc:mysql://dari-db:3306/bootdb?allowPublicKeyRetrieval=true&useSSL=false
         - name: SPRING_DATASOURCE_USERNAME         
           value: root
-        -name: SPRING_DATASOURCE_USERNAME
+        - name: SPRING_DATASOURCE_USERNAME
           value: root
           
         
