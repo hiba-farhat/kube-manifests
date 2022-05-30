@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: dari-backend
-        image: hibafh/backend
+        image: hibafh/dari-backend
         ports:
         - containerPort: 8081
         env:
