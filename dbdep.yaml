@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: dari-db
+  labels:
+    app: dari-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dari-db
+  template:
+    metadata:
+      labels:
+        app: dari-db
+    spec:
+      containers:
+      - name: dari-db
+        image: mysql
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: root
+        - name: MYSQL_DATABASE
+          value: bootdb
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dari-db
+spec:
+  selector:
+    app: dari-db
+  type: LoadBalancer  
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 80
+      nodePort: 30001
