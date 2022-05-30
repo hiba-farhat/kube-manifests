@@ -21,7 +21,7 @@ spec:
         - containerPort: 8081
         env:
         - name: ME_CONFIG_MONGODB_ADMINUSERNAME
-          value: jdbc:mysql://dari-mysql:3306/bootdb?allowPublicKeyRetrieval=true&useSSL=false
+          value: jdbc:mysql://dari-db:3306/bootdb?allowPublicKeyRetrieval=true&useSSL=false
         - name: SPRING_DATASOURCE_USERNAME         
           value: root
         -name: SPRING_DATASOURCE_USERNAME
